@@ -1,0 +1,1 @@
+{\n  "root": true,\n  "extends": [\n    "standard-with-typescript"\n  ],\n  "parserOptions": {\n    "project": ["./tsconfig.json"]\n  },\n  "rules": {\n    "@typescript-eslint/explicit-function-return-type": "off"\n  }\n}\n

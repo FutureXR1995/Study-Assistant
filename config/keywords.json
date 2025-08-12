@@ -1,0 +1,13 @@
+{
+  "start": ["开始学习", "start", "加油"],
+  "status": ["状态", "统计", "status"],
+  "help": ["帮助", "help", "菜单"],
+  "plan": ["计划", "今日计划"],
+  "weekly": ["周报", "weekly"],
+  "tasks": {
+    "vocab":   { "aliases": ["词汇", "單字"],   "done": ["已完成", "✅"], "miss": ["未完成", "❌"] },
+    "grammar": { "aliases": ["语法", "文法"],   "done": ["已完成", "✅"], "miss": ["未完成", "❌"] },
+    "listening": { "aliases": ["听力", "聽力"], "done": ["已完成", "✅"], "miss": ["未完成", "❌"] },
+    "reading": { "aliases": ["阅读", "閱讀"],   "done": ["已完成", "✅"], "miss": ["未完成", "❌"] }
+  }
+}

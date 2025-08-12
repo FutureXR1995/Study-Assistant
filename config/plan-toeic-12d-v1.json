@@ -1,0 +1,96 @@
+{
+  "version": "toeic-12d-v1",
+  "timezone": "Asia/Tokyo",
+  "placeholderUserKey": "__LINE_USER_ID__",
+  "notes": "将 __LINE_USER_ID__ 替换为目标用户ID；Make HTTP 模块直接把 'to'/'messages' 作为 body 发送到 https://api.line.me/v2/bot/message/push",
+  "days": [
+    {
+      "day": 1,
+      "morning": {
+        "to": "__LINE_USER_ID__",
+        "messages": [
+          {
+            "type": "text",
+            "text": "📘 今日托业计划（4h）\n1) 词汇 60m：核心词50（办公+日常），复习旧词50\n2) 语法 60m：句型基础 + 一般时态（Part5入门）\n3) 听力 60m：Part1 看图 + Part2 问答基础训练\n4) 阅读 60m：短文速读+摘要（≈300词）\n晚间我会来确认✅",
+            "quickReply": {
+              "items": [
+                {
+                  "type": "action",
+                  "action": {
+                    "type": "message",
+                    "label": "开始学习 ▶️",
+                    "text": "开始学习"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "evening": {
+        "to": "__LINE_USER_ID__",
+        "messages": [
+          {
+            "type": "text",
+            "text": "小确认：今天计划完成了吗？（点下面按钮即可）",
+            "quickReply": {
+              "items": [
+                {
+                  "type": "action",
+                  "action": {
+                    "type": "postback",
+                    "label": "✅ 已完成",
+                    "data": "status=done"
+                  }
+                },
+                {
+                  "type": "action",
+                  "action": {
+                    "type": "postback",
+                    "label": "❌ 未完成",
+                    "data": "status=miss"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "flexMorning": {
+        "to": "__LINE_USER_ID__",
+        "messages": [
+          {
+            "type": "flex",
+            "altText": "第1天托业计划",
+            "contents": {
+              "type": "bubble",
+              "body": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                  { "type": "text", "text": "第1天托业计划", "weight": "bold", "size": "lg" },
+                  { "type": "separator", "margin": "md" },
+                  { "type": "text", "text": "词汇 60m：核心词50（办公+日常），复习旧词50" },
+                  { "type": "text", "text": "语法 60m：句型基础 + 一般时态（Part5入门）" },
+                  { "type": "text", "text": "听力 60m：Part1 看图 + Part2 问答基础训练" },
+                  { "type": "text", "text": "阅读 60m：短文速读+摘要（≈300词）" }
+                ]
+              },
+              "footer": {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  {
+                    "type": "button",
+                    "action": { "type": "message", "label": "开始学习 ▶️", "text": "开始学习" },
+                    "style": "primary"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

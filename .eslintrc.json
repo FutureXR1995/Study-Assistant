@@ -1,1 +1,41 @@
-{\n  "root": true,\n  "extends": [\n    "standard-with-typescript"\n  ],\n  "parserOptions": {\n    "project": ["./tsconfig.json"]\n  },\n  "rules": {\n    "@typescript-eslint/explicit-function-return-type": "off"\n  }\n}\n
+{
+  "root": true,
+  "env": {
+    "es2022": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parserOptions": {
+    "project": ["./tsconfig.json"],
+    "tsconfigRootDir": ".",
+    "sourceType": "module"
+  },
+  "ignorePatterns": ["dist", "node_modules"],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/prefer-nullish-coalescing": "off",
+    "@typescript-eslint/no-floating-promises": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/promise-function-async": "off",
+    "@typescript-eslint/member-delimiter-style": "off",
+    "@typescript-eslint/semi": "off",
+    "@typescript-eslint/quotes": "off",
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/comma-spacing": "off",
+    "no-useless-escape": "off",
+    "no-empty": "off",
+    "comma-spacing": "off",
+    "object-curly-newline": "off",
+    "object-property-newline": "off",
+    "dot-notation": "off",
+    "template-curly-spacing": "off",
+    "eol-last": "off"
+  }
+}
